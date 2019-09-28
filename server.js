@@ -4,7 +4,7 @@ var cors = require('cors');
 var UserRoute = require('./api/routes/userRoutes');
 var todoList = require('./api/routes/todoListRoutes');
 var app = express();
-var logger = require('morgan');
+//var logger = require('morgan');
 
 // Set up mongoose connection
 var mongoose = require('mongoose');
@@ -17,7 +17,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(logger('dev'));
+//app.use(logger('dev'));
 app.use(cors());
 app.use('/user', UserRoute);
 app.use('/list', todoList);
