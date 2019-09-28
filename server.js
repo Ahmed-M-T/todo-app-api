@@ -21,6 +21,9 @@ app.use(logger('dev'));
 app.use(cors());
 app.use('/user', UserRoute);
 app.use('/list', todoList);
+app.get('*',(req,res)=>{
+    res.send("Welecome this app for test todo app!")
+})
 
 
 var port = 1234;
